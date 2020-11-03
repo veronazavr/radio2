@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
     @Test
     public void nextCurrentStationNormal() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 0, 2 );
         radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(2);
@@ -17,7 +17,7 @@ class RadioTest {
 
     @Test
     public void nextCurrentStationMaxBorder() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9,0,9);
         radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(9);
@@ -28,7 +28,7 @@ class RadioTest {
 
     @Test
     public void prevCurrentStationNormal() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9,0,2);
         radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(2);
@@ -38,7 +38,7 @@ class RadioTest {
 
     @Test
     public void prevCurrentStationMinBorder() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9,0,0);
         radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(0);
@@ -48,7 +48,7 @@ class RadioTest {
 
     @Test
     public void remoteCurrentStationNormal() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9,0,2);
         radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(2);
@@ -58,21 +58,21 @@ class RadioTest {
 
     @Test
     public void setMaxStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9);
         radio.setMaxStation(9);
         assertEquals(9, radio.getMaxStation());
     }
 
     @Test
     public void setMinStationTest() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(0,);
         radio.setMinStation(0);
         assertEquals(0, radio.getMinStation());
     }
 
     @Test
     public void remoteCurrentStationOverMaxStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9,0);
         radio.setMaxStation(9);
         radio.setMinStation(0);
         radio.setCurrentStation(2);
