@@ -1,12 +1,12 @@
 package ru.netology.domain;
 
 public class Radio {
-    private int maxStation;
-    private int minStation;
-    private int currentStation;
-    private int maxVolume;
-    private int minVolume;
-    private int currentVolume;
+    private int maxStation = 9; // Максмимальная станция
+    private int minStation = 0; // Минимальная станция
+    private int currentStation; // Выбранная станция
+    private int maxVolume = 100; // Максимальная громкость
+    private int minVolume = 0; // Минимальная громкость
+    private int currentVolume; // Выбранная громкость
 
     public Radio(int maxStation,
                  int minStation,

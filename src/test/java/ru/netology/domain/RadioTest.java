@@ -8,6 +8,9 @@ class RadioTest {
     @Test
     public void nextCurrentStationNormal() {
         Radio radio = new Radio(9, 0, 2 );
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setCurrentStation(2);
         radio.nextCurrentStation();
         assertEquals(3, radio.getCurrentStation());
     }
@@ -15,6 +18,9 @@ class RadioTest {
     @Test
     public void nextCurrentStationMaxBorder() {
         Radio radio = new Radio(9,0,9);
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setCurrentStation(9);
         radio.nextCurrentStation();
         assertEquals(0, radio.getCurrentStation());
     }
@@ -23,6 +29,9 @@ class RadioTest {
     @Test
     public void prevCurrentStationNormal() {
         Radio radio = new Radio(9,0,2);
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setCurrentStation(2);
         radio.prevCurrentStation();
         assertEquals(1, radio.getCurrentStation());
     }
@@ -77,6 +86,9 @@ class RadioTest {
     @Test
     public void setCurrentOverMaxStation() {
         Radio radio = new Radio(9,0,8);
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setCurrentStation(8);
         radio.setCurrentStation(60);
         assertEquals(8, radio.getCurrentStation());
     }
