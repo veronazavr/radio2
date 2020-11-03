@@ -25,6 +25,16 @@ public class Radio {
     public Radio(int MaxStation, int minStation, int currentStation) {
     }
 
+    public Radio(int maxStation, int minStation) {
+    }
+
+    public Radio(int maxStation) {
+    }
+
+    public Radio() {
+
+    }
+
 //    станции
 
     public int getMaxStation() {
