@@ -73,7 +73,7 @@ class RadioTest {
                 50
         );
         radio.prevCurrentStation();
-        int expected = 4;
+        int expected = 6;
         assertEquals(expected, radio.getCurrentStation());
     }
 }
